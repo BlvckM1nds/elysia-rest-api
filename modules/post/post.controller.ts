@@ -37,7 +37,6 @@ class PostController {
   async update(ctx: Context) {
     const { id } = ctx.params;
     const body = await ctx.request.json();
-    console.log(body);
     const post = await postService.update(Number(id), body);
 
     return {
